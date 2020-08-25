@@ -12,8 +12,10 @@ function displayOutput() {
 			//document.getElementById("waifu_legal_status").innerHTML = "Legal Status : " + waifusdata.stat;
 			if (waifusdata.age < 18) {
 				document.getElementById("waifu_legal_status").innerHTML = "Legal Status : Dude, don't!";
-			} else {
+			} else if (waifusdata.age >= 18 && waifusdata.age < 29) {
 				document.getElementById("waifu_legal_status").innerHTML = "Legal Status : Hmm.. for me she is fine.";
+			} else {
+				document.getElementById("waifu_legal_status").innerHTML = "Legal Status : Whatever. Up to you.";
 			}
 		} else if (this.status == 404) {
 			document.getElementById("waifu_image").src = "/notfound.png";
