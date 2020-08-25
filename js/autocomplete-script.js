@@ -82,5 +82,5 @@ xmlhttp.onreadystatechange = function() {
 		autocomplete(document.getElementById("myInput"), waifus);
 	}
 };
-xmlhttp.open("GET", "/waifusdata/waifus.json");
+xmlhttp.open("GET", window.location.href + "waifusdata/waifus.json");
 xmlhttp.send();
