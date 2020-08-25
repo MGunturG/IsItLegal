@@ -9,7 +9,12 @@ function displayOutput() {
 			document.getElementById("waifu_name_japan").innerHTML = waifusdata.jpn;
 			document.getElementById("waifu_description").innerHTML = "Description : " + waifusdata.desc;
 			document.getElementById("waifu_age").innerHTML = "Age : " + waifusdata.age;
-			document.getElementById("waifu_legal_status").innerHTML = "Legal Status : " + waifusdata.stat;
+			//document.getElementById("waifu_legal_status").innerHTML = "Legal Status : " + waifusdata.stat;
+			if (waifusdata.age < 18) {
+				document.getElementById("waifu_legal_status").innerHTML = "Legal Status : Dude, don't!";
+			} else {
+				document.getElementById("waifu_legal_status").innerHTML = "Legal Status : Hmm.. for me she is fine.";
+			}
 		} else if (this.status == 404) {
 			document.getElementById("waifu_image").src = "/notfound.png";
 			document.getElementById("waifu_name").innerHTML = "Not Found or invalid input";
