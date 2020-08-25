@@ -27,6 +27,4 @@ function createData() {
 	}
 
 	newLink.click();
-	//$('.alert').alert()
-	//window.location.replace("/index.html");
 }
